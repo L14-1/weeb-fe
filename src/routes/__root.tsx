@@ -4,6 +4,8 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
 import Footer from '@/components/layout/footer'
+import { Toaster } from '@/components/ui/sonner'
+import { Spotlight } from '@/components/ui/spotlight-new'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
@@ -37,7 +39,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="overflow-x-hidden pt-60 pb-30">
+      <body className="overflow-x-hidden pt-60">
         <Header />
         {children}
         <Footer />
@@ -52,6 +54,8 @@ function RootDocument({ children }: { children: React.ReactNode }) {
             },
           ]}
         />
+        <Spotlight />
+        <Toaster />
         <Scripts />
       </body>
     </html>

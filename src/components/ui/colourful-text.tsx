@@ -3,7 +3,7 @@ import { motion } from 'motion/react'
 import React from 'react'
 
 export default function ColourAnimatedText({ text }: { text: string }) {
-  const colors = ['rgb(147, 51, 234)']
+  const colors = ['rgb(192, 132, 252)']
 
   const [currentColors, setCurrentColors] = React.useState(colors)
   const [count, setCount] = React.useState(0)

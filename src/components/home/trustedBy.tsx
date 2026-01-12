@@ -6,7 +6,7 @@ export function TrustedBy() {
   return (
     <>
       <TextAnimate
-        className="pt-8 text-center font-extrabold text-5xl"
+        className="pt-8 font-extrabold text-5xl"
         animation="slideUp"
         delay={0.5}
       >

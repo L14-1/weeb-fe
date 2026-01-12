@@ -28,10 +28,6 @@ const footerSections = [
         title: 'Accessibilité',
         href: '#',
       },
-      {
-        title: 'Cinq',
-        href: '#',
-      },
     ],
   },
   {
@@ -97,7 +93,7 @@ const footerSections = [
 
 const Footer = () => {
   return (
-    <footer className="border-t">
+    <footer className="border-t bg-card">
       <div className="max-w-(--breakpoint-xl) mx-auto">
         <div className="py-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
           <div className="col-span-full xl:col-span-2">
@@ -139,19 +135,34 @@ const Footer = () => {
 
           <div className="flex items-center gap-5 text-muted-foreground">
             <a href="#" target="_blank">
-              <HugeiconsIcon icon={YoutubeIcon} className="h-5 w-5" />
+              <HugeiconsIcon
+                icon={YoutubeIcon}
+                className="h-5 w-5 hover:text-white cursor-pointer"
+              />
             </a>
             <a href="#" target="_blank">
-              <HugeiconsIcon icon={Facebook} className="h-5 w-5" />
+              <HugeiconsIcon
+                icon={Facebook}
+                className="h-5 w-5 hover:text-white cursor-pointer"
+              />
             </a>
             <a href="#" target="_blank">
-              <HugeiconsIcon icon={Twitter} className="h-5 w-5" />
+              <HugeiconsIcon
+                icon={Twitter}
+                className="h-5 w-5 hover:text-white cursor-pointer"
+              />
             </a>
             <a href="#" target="_blank">
-              <HugeiconsIcon icon={Instagram} className="h-5 w-5" />
+              <HugeiconsIcon
+                icon={Instagram}
+                className="h-5 w-5 hover:text-white cursor-pointer"
+              />
             </a>
             <a href="#" target="_blank">
-              <HugeiconsIcon icon={Linkedin} className="h-5 w-5" />
+              <HugeiconsIcon
+                icon={Linkedin}
+                className="h-5 w-5 hover:text-white cursor-pointer"
+              />
             </a>
           </div>
         </div>
