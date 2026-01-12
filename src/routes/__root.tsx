@@ -3,6 +3,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
+import Footer from '@/components/layout/footer'
 import appCss from '../styles.css?url'
 
 export const Route = createRootRoute({
@@ -36,9 +37,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="overflow-x-hidden">
+      <body className="overflow-x-hidden pt-60 pb-30">
         <Header />
         {children}
+        <Footer />
         <TanStackDevtools
           config={{
             position: 'bottom-right',

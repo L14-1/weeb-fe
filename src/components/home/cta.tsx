@@ -1,5 +1,6 @@
 import { Button } from '../ui/button'
 import ColourAnimatedText from '../ui/colourful-text'
+import { TextAnimate } from '../ui/text-animate'
 
 export function Cta() {
   return (
@@ -22,10 +23,12 @@ export function Cta() {
         </div>
       </h2>
       <p className="text-center mx-auto max-w-11/12">
-        Le monde du web évolue constamment, et nous sommes là pour vous guider à
-        travers ses tendances, technologies et meilleures pratiques. Que vous
-        soyez développeur, designer ou passionné du digital, notre blog vous
-        offre du contenu de qualité pour rester à la pointe.
+        <TextAnimate animation="blurIn">
+          Le monde du web évolue constamment, et nous sommes là pour vous guider
+          à travers ses tendances, technologies et meilleures pratiques. Que
+          vous soyez développeur, designer ou passionné du digital, notre blog
+          vous offre du contenu de qualité pour rester à la pointe.
+        </TextAnimate>
       </p>
       <div className="flex justify-center gap-4">
         <Button size="lg">Découvrir les articles</Button>

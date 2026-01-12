@@ -1,14 +1,17 @@
 import { InfiniteSlider } from '../ui/infinite-slider'
 import { ProgressiveBlur } from '../ui/progressive-blur'
-import { WordPullUpText } from '../ui/word-pull-up-text'
+import { TextAnimate } from '../ui/text-animate'
 
 export function TrustedBy() {
   return (
     <>
-      <WordPullUpText
-        text="Ils nous font confiance"
-        className="pt-8 text-center"
-      />
+      <TextAnimate
+        className="pt-8 text-center font-extrabold text-5xl"
+        animation="slideUp"
+        delay={0.5}
+      >
+        Ils nous font confiance
+      </TextAnimate>
 
       <div className="relative h-60 w-full overflow-hidden">
         <InfiniteSlider
