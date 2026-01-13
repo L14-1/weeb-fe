@@ -26,13 +26,21 @@ export const ContainerScroll = ({
     }
   }, [])
 
-  const scaleDimensions = () => {
-    return isMobile ? [0.7, 0.9] : [1.05, 1]
+  const rotateDimensions = () => {
+    return isMobile ? [0, 0] : [20, 0]
   }
 
-  const rotate = useTransform(scrollYProgress, [0, 1], [20, 0])
+  const translateDimensions = () => {
+    return isMobile ? [0, 0] : [0, -100]
+  }
+
+  const scaleDimensions = () => {
+    return isMobile ? [1, 1] : [1.05, 1]
+  }
+
+  const rotate = useTransform(scrollYProgress, [0, 1], rotateDimensions())
   const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions())
-  const translate = useTransform(scrollYProgress, [0, 1], [0, -100])
+  const translate = useTransform(scrollYProgress, [0, 1], translateDimensions())
 
   return (
     <div
@@ -85,7 +93,7 @@ export const Card = ({
       }}
       className="max-w-5xl mt-16 mx-auto h-120 md:h-160 w-full"
     >
-      <div className=" h-full w-full overflow-hidden">{children}</div>
+      <div className="h-full w-full overflow-hidden">{children}</div>
     </motion.div>
   )
 }

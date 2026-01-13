@@ -6,7 +6,7 @@ export function TrustedBy() {
   return (
     <>
       <TextAnimate
-        className="pt-8 font-extrabold text-5xl"
+        className="pt-8 font-extrabold text-2xl md:text-5xl"
         animation="slideUp"
         delay={0.5}
       >
@@ -18,11 +18,10 @@ export function TrustedBy() {
           className="flex h-full w-full items-center"
           gap={80}
           speed={60}
-          speedOnHover={10}
+          speedOnHover={25}
         >
           <svg
-            width="177"
-            height="32"
+            className="h-5 md:h-8"
             viewBox="0 0 177 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -45,8 +44,7 @@ export function TrustedBy() {
             />
           </svg>
           <svg
-            width="133"
-            height="32"
+            className="h-5 md:h-8"
             viewBox="0 0 133 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +61,7 @@ export function TrustedBy() {
             />
           </svg>
           <svg
-            width="125"
-            height="32"
+            className="h-5 md:h-8"
             viewBox="0 0 125 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -81,8 +78,7 @@ export function TrustedBy() {
             />
           </svg>
           <svg
-            width="110"
-            height="32"
+            className="h-5 md:h-8"
             viewBox="0 0 110 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +93,7 @@ export function TrustedBy() {
             />
           </svg>
           <svg
-            width="166"
-            height="32"
+            className="h-5 md:h-8"
             viewBox="0 0 166 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -122,12 +117,12 @@ export function TrustedBy() {
           </svg>
         </InfiniteSlider>
         <ProgressiveBlur
-          className="pointer-events-none absolute top-0 -left-0.5 h-full w-50"
+          className="pointer-events-none absolute top-0 -left-0.5 h-full w-30 md:w-50"
           direction="left"
           blurIntensity={0.35}
         />
         <ProgressiveBlur
-          className="pointer-events-none absolute top-0 -right-0.5 h-full w-50"
+          className="pointer-events-none absolute top-0 -right-0.5 h-full w-30 md:w-50"
           direction="right"
           blurIntensity={0.35}
         />

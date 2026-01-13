@@ -41,7 +41,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       </head>
       <body className="overflow-x-hidden pt-60">
         <Header />
-        {children}
+        <main className="px-4 lg:px-0">{children}</main>
         <Footer />
         <TanStackDevtools
           config={{

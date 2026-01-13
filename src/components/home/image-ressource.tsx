@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { ArrowRight02Icon } from '@hugeicons/core-free-icons'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { BlurFade } from '../ui/blur-fade'
@@ -29,18 +30,18 @@ export default function ImageRessource({
     <section
       className={
         orientation === 'normal'
-          ? 'flex gap-12 items-center pt-32'
-          : 'flex gap-12 items-center pt-32 flex-row-reverse'
+          ? 'flex gap-12 items-center pt-32 flex-col md:flex-row'
+          : 'flex gap-12 items-center pt-32 flex-col md:flex-row-reverse'
       }
     >
       <div className="flex flex-col gap-9 flex-1">
-        <p className="uppercase text-sm tracking-wider">
+        <p className="uppercase text-xs md:text-sm tracking-wider ">
           <TextAnimate animation="blurIn" delay={0.5}>
             {headtitle}
           </TextAnimate>
         </p>
         <h4>{title}</h4>
-        <p className="text-sm">
+        <p className="text-xs md:text-sm">
           <TextAnimate animation="blurIn" delay={0.5}>
             {description}
           </TextAnimate>
@@ -51,13 +52,13 @@ export default function ImageRessource({
             <HugeiconsIcon
               height={20}
               icon={ArrowRight02Icon}
-              className="-translate-y-0.5"
+              className="md:-translate-y-0.5"
             />
           </Button>
         </div>
       </div>
       <BlurFade
-        className={imageSize}
+        className={cn(imageSize, 'max-w-10/12')}
         inView={true}
         blur="18px"
         delay={0.3}

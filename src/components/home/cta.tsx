@@ -6,7 +6,7 @@ import { TextAnimate } from '../ui/text-animate'
 export function Cta() {
   return (
     <div className="flex flex-col gap-20">
-      <h2 className="text-7xl text-center font-extrabold">
+      <h2 className="text-4xl md:text-7xl text-center font-extrabold">
         Explorez le <ColourAnimatedText text="web" /> sous toutes ses{' '}
         <div className="inline-block relative">
           facettes
@@ -23,7 +23,7 @@ export function Cta() {
           </svg>
         </div>
       </h2>
-      <p className="text-center mx-auto max-w-11/12">
+      <p className="text-center mx-auto max-w-11/12 text-sm md:text-base">
         <TextAnimate animation="blurIn">
           Le monde du web évolue constamment, et nous sommes là pour vous guider
           à travers ses tendances, technologies et meilleures pratiques. Que
@@ -32,11 +32,11 @@ export function Cta() {
         </TextAnimate>
       </p>
       <BlurFade blur="16px" delay={0.8} duration={0.7}>
-        <div className="flex justify-center gap-4">
-          <Button size="lg">Découvrir les articles</Button>
+        <div className="flex justify-center flex-col gap-4 md:flex-row">
           <Button size="lg" variant="outline">
-            S'abonner à la newsletter
+            Découvrir les articles
           </Button>
+          <Button size="lg">S'abonner à la newsletter</Button>
         </div>
       </BlurFade>
     </div>

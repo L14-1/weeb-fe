@@ -22,7 +22,7 @@ function App() {
         description="Que vous débutiez en développement web ou que vous soyez un expert cherchant à approfondir vos connaissances, nous vous proposons des tutoriels, guides et bonnes pratiques pour apprendre efficacement."
         linkTitle="Explorez les ressources"
         title={
-          <h4 className="text-5xl font-bold">
+          <h4 className="text-4xl md:text-5xl font-bold">
             <Highlighter action="highlight" color="#C084FC" isView={true}>
               Apprenez
             </Highlighter>{' '}
@@ -33,7 +33,7 @@ function App() {
           </h4>
         }
         imageUrl={'./images/preview.png'}
-        imageSize="w-13/24"
+        imageSize="md:w-13/24"
       />
       <ImageRessource
         headtitle="Le web, un écosystème en constante évolution"
@@ -41,7 +41,7 @@ function App() {
         linkTitle="Lire les articles récents"
         orientation="reverse"
         title={
-          <h4 className="text-5xl font-bold">
+          <h4 className="text-4xl md:text-5xl font-bold">
             Restez informé des dernières{' '}
             <Highlighter action="highlight" color="#C084FC" isView={true}>
               tendances
@@ -49,7 +49,7 @@ function App() {
           </h4>
         }
         imageUrl={'./images/shapes.png'}
-        imageSize="w-4/12"
+        imageSize="md:w-4/12"
       />
     </main>
   )
