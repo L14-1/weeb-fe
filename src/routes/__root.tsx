@@ -1,13 +1,7 @@
 import { TanStackDevtools } from '@tanstack/react-devtools'
-import {
-  ClientOnly,
-  HeadContent,
-  Scripts,
-  createRootRoute,
-} from '@tanstack/react-router'
+import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 
-import Analytics from '@/components/Analytics'
 import Footer from '@/components/layout/footer'
 import { Header } from '@/components/layout/header'
 import { Toaster } from '@/components/ui/sonner'
@@ -32,6 +26,13 @@ export const Route = createRootRoute({
       {
         rel: 'stylesheet',
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        src: 'https://umami.nicolasmaitre.dev/script.js',
+        defer: true,
+        'data-website-id': 'eef5f71a-6afc-4d91-99ae-bf2a4629f077',
       },
     ],
   }),
@@ -62,9 +63,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         />
         <Spotlight />
         <Toaster />
-        <ClientOnly>
-          <Analytics />
-        </ClientOnly>
         <Scripts />
       </body>
     </html>
